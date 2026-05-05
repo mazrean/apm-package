@@ -1,7 +1,9 @@
 name: apm-plackage-frontend
-version: 0.1.0
-description: Agent configuration for frontend (TypeScript / Astro / Lit / templ) projects. Centralises Playwright tooling.
+version: 0.2.0
+description: Agent configuration for frontend (TypeScript / Astro / Lit / templ) projects. Centralises Playwright CLI + chrome-devtools-mcp tooling and their authoring skills.
 
 dependencies:
   apm:
     - mazrean/apm-plackage/common
+    - microsoft/playwright-cli/skills/playwright-cli
+    - ChromeDevTools/chrome-devtools-mcp/skills/chrome-devtools-cli

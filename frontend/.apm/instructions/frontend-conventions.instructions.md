@@ -4,11 +4,14 @@ applyTo: "**/*.{ts,tsx,js,jsx,astro,svelte,vue,templ}"
 
 # Frontend conventions
 
-## Browser automation
+## Browser automation & debugging
 
-- Use the Playwright CLI for E2E and visual regression tests.
-- Do NOT register a Playwright MCP server. The Agent Skill (`playwright-cli`) is the canonical interface.
-- `chrome-devtools` MCP may be added per-repo for debugging if needed; Playwright remains the testing path.
+- **Playwright (E2E / VRT)**: use the Playwright CLI — the `@playwright/cli` npm package, installed via mise.
+  The `playwright-cli` Agent Skill (from `microsoft/playwright-cli`) is auto-installed by this package and is the canonical interface for agents.
+  Do NOT register a Playwright MCP server.
+- **chrome-devtools-mcp (debugging)**: the `chrome-devtools-mcp` npm package is installed via mise so the binary is available both as an MCP server and as a CLI.
+  The `chrome-devtools-cli` Agent Skill (from `ChromeDevTools/chrome-devtools-mcp`) is auto-installed by this package; prefer it for skill-based agent flows.
+  Per-repo `apm.yml` may still register `chrome-devtools-mcp` as an MCP server when runtime tool-calling is preferred.
 
 ## Build tooling
 
