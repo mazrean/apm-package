@@ -1,0 +1,8 @@
+name: apm-plackage-goreleaser
+version: 0.1.0
+description: Agent configuration for projects that release multi-platform binaries via goreleaser. Used by both Go and Zig repos.
+
+dependencies:
+  apm:
+    - mazrean/apm-plackage/common
+    - mazrean/agent-skills/skills/releasing-zig-with-goreleaser

@@ -1,0 +1,9 @@
+name: apm-plackage-zig
+version: 0.1.0
+description: Agent configuration for Zig projects.
+
+dependencies:
+  apm:
+    - mazrean/apm-plackage/common
+    - mazrean/agent-skills/skills/writing-zig-cli-tools
+    - mazrean/agent-skills/skills/sharing-sockets-with-so-reuseport-in-zig

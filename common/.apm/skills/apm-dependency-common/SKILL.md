@@ -1,0 +1,21 @@
+---
+name: apm-dependency-common
+description: Lists the CLI tools that must appear in mise.toml for any repo depending on apm-plackage/common. Use when bootstrapping or auditing a repo's mise.toml.
+---
+
+# Common package — mise dependencies
+
+Every repo that depends on `mazrean/apm-plackage/common` SHOULD include the following tools in its `mise.toml`:
+
+```toml
+[tools]
+apm = "latest"
+gh = "latest"
+```
+
+## Notes
+
+- `apm` is the [Agent Package Manager](https://github.com/microsoft/apm). Required for `apm install` / `apm compile`.
+- `gh` is the GitHub CLI. Used by the `committing-code` skill and any PR-related workflow.
+- The coding-agent CLI itself (`claude-code`, `codex`, `gemini-cli`, etc.) is intentionally NOT pinned in mise — developers install their preferred client locally.
+- This list is hand-merged into each repo's `mise.toml`; `apm` does not generate `mise.toml` automatically.

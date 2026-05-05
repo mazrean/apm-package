@@ -1,0 +1,7 @@
+name: apm-plackage-android
+version: 0.1.0
+description: Agent configuration for Kotlin / Android projects.
+
+dependencies:
+  apm:
+    - mazrean/apm-plackage/common
