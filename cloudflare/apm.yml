@@ -1,8 +1,32 @@
 name: apm-plackage-cloudflare
-version: 0.1.0
-description: Agent configuration for Cloudflare Workers projects. Depends on the frontend package because Workers projects ship TypeScript and consume Astro / Vite tooling.
+version: 0.2.0
+description: Agent configuration for Cloudflare Workers projects. Bundles Cloudflare's official skill authoring set (cloudflare/skills) and the core Workers-development remote MCP servers. Depends on the frontend package because Workers projects ship TypeScript and consume Astro / Vite tooling.
 
 dependencies:
   apm:
     - mazrean/apm-plackage/common
     - mazrean/apm-plackage/frontend
+    - cloudflare/skills/skills/cloudflare
+    - cloudflare/skills/skills/workers-best-practices
+    - cloudflare/skills/skills/wrangler
+  mcp:
+    # Documentation lookup across developers.cloudflare.com.
+    - name: cloudflare-docs
+      transport: http
+      url: https://docs.mcp.cloudflare.com/mcp
+    # D1 / R2 / KV / Hyperdrive / Queues / Durable Objects bindings management.
+    - name: cloudflare-bindings
+      transport: http
+      url: https://bindings.mcp.cloudflare.com/mcp
+    # Workers invocation logs, errors, and metrics.
+    - name: cloudflare-observability
+      transport: http
+      url: https://observability.mcp.cloudflare.com/mcp
+    # Workers Builds status and triggers.
+    - name: cloudflare-builds
+      transport: http
+      url: https://builds.mcp.cloudflare.com/mcp
+    # Browser Rendering API control.
+    - name: cloudflare-browser
+      transport: http
+      url: https://browser.mcp.cloudflare.com/mcp
