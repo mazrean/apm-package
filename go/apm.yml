@@ -1,8 +1,14 @@
 name: apm-plackage-go
-version: 0.1.0
-description: Agent configuration for Go projects (libraries, CLIs, servers).
+version: 0.2.0
+description: Agent configuration for Go projects (libraries, CLIs, servers). Standardises on mazrean/kessoku for compile-time DI and a per-repo `tools/lint` Go module for linting. Bundles the gopls MCP server for code intelligence.
 
 dependencies:
   apm:
     - mazrean/apm-plackage/common
     - mazrean/agent-skills/skills/using-go-tool-directive
+  mcp:
+    # Go LSP exposed as an MCP server (see `gopls mcp` in golang.org/x/tools).
+    - name: gopls
+      transport: stdio
+      command: gopls
+      args: ["mcp"]
