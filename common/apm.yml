@@ -1,0 +1,17 @@
+name: apm-plackage-common
+version: 0.1.0
+description: Shared baseline agent configuration for every mazrean repository.
+
+dependencies:
+  apm:
+    - mazrean/agent-skills/skills/committing-code
+    - mazrean/agent-skills/skills/writing-feature-spec
+    - mazrean/agent-skills/skills/writing-technical-design
+    - mazrean/agent-skills/skills/writing-implementation-tasks
+    - mazrean/agent-skills/skills/writing-project-constitution
+    - mazrean/agent-skills/skills/creating-test-cases
+    - mazrean/agent-skills/skills/creating-agent-skills
+  mcp:
+    - name: deepwiki
+      transport: http
+      url: https://mcp.deepwiki.com/mcp
