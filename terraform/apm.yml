@@ -1,5 +1,5 @@
 name: apm-plackage-terraform
-version: 0.1.0
+version: 0.1.1
 description: Agent configuration for Terraform projects. Standardises module layout, formatting / lint workflow, and registers the HashiCorp Terraform MCP server for provider and registry lookups.
 
 dependencies:
