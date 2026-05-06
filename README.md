@@ -13,6 +13,8 @@ Shared APM (Agent Package Manager) packages for [mazrean](https://github.com/maz
 | `frontend` | TypeScript / Astro / Lit / templ projects. Includes Playwright CLI tooling. |
 | `android` | Kotlin / Android projects. |
 | `goreleaser` | Cross-build / release tooling shared by Go and Zig repos. |
+| `terraform` | Terraform projects. Registers the HashiCorp Terraform MCP server. |
+| `terraform-gcp` | Terraform projects targeting Google Cloud Platform (depends on `terraform`). |
 
 ## Consume from a repo
 
