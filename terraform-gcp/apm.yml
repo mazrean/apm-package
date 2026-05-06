@@ -1,0 +1,8 @@
+name: apm-plackage-terraform-gcp
+version: 0.1.0
+description: Agent configuration for Terraform projects targeting Google Cloud Platform. Inherits apm-plackage/terraform and adds gcloud-specific conventions (auth, GCS backend, provider pinning, naming).
+
+dependencies:
+  apm:
+    - mazrean/apm-plackage/common
+    - mazrean/apm-plackage/terraform

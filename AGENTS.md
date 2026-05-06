@@ -4,7 +4,7 @@ This repo distributes shared apm packages consumed by every mazrean repository.
 
 ## Layout
 
-Each top-level directory (`common/`, `go/`, `zig/`, `cloudflare/`, `frontend/`, `android/`, `goreleaser/`) is an independent apm package with the standard structure:
+Each top-level directory (`common/`, `go/`, `zig/`, `cloudflare/`, `frontend/`, `android/`, `goreleaser/`, `terraform/`, `terraform-gcp/`) is an independent apm package with the standard structure:
 
 ```
 <package>/

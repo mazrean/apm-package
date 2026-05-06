@@ -1,0 +1,13 @@
+name: apm-plackage-terraform
+version: 0.1.0
+description: Agent configuration for Terraform projects. Standardises module layout, formatting / lint workflow, and registers the HashiCorp Terraform MCP server for provider and registry lookups.
+
+dependencies:
+  apm:
+    - mazrean/apm-plackage/common
+  mcp:
+    # Official HashiCorp Terraform MCP server: provider docs, registry search, module metadata.
+    - name: terraform
+      transport: stdio
+      command: terraform-mcp-server
+      args: ["stdio"]
