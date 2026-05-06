@@ -9,13 +9,13 @@ Every repo that depends on `mazrean/apm-plackage/common` SHOULD include the foll
 
 ```toml
 [tools]
-apm = "latest"
+"github:microsoft/apm" = "latest"
 gh = "latest"
 ```
 
 ## Notes
 
-- `apm` is the [Agent Package Manager](https://github.com/microsoft/apm). Required for `apm install` / `apm compile`.
+- `github:microsoft/apm` is the [Agent Package Manager](https://github.com/microsoft/apm), installed via mise's GitHub backend so releases are pulled directly from the upstream repo. Required for `apm install` / `apm compile`.
 - `gh` is the GitHub CLI. Used by the `committing-code` skill and any PR-related workflow.
 - The coding-agent CLI itself (`claude-code`, `codex`, `gemini-cli`, etc.) is intentionally NOT pinned in mise — developers install their preferred client locally.
 - This list is hand-merged into each repo's `mise.toml`; `apm` does not generate `mise.toml` automatically.
