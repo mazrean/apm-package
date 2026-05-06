@@ -6,6 +6,9 @@ dependencies:
   apm:
     - mazrean/apm-plackage/common
   mcp:
-    # Official HashiCorp Terraform MCP server (provider docs, registry search, module metadata).
-    # Resolved via the apm registry; binary is provisioned by mise (see apm-dependency-terraform skill).
-    - io.github.hashicorp/terraform-mcp-server
+    # Official HashiCorp Terraform MCP server: provider docs, registry search, module metadata.
+    - name: terraform
+      registry: false
+      transport: stdio
+      command: terraform-mcp-server
+      args: ["stdio"]

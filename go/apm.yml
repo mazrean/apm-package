@@ -9,6 +9,7 @@ dependencies:
   mcp:
     # Go LSP exposed as an MCP server (see `gopls mcp` in golang.org/x/tools).
     - name: gopls
+      registry: false
       transport: stdio
       command: gopls
       args: ["mcp"]

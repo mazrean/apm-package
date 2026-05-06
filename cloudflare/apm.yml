@@ -12,21 +12,26 @@ dependencies:
   mcp:
     # Documentation lookup across developers.cloudflare.com.
     - name: cloudflare-docs
+      registry: false
       transport: http
       url: https://docs.mcp.cloudflare.com/mcp
     # D1 / R2 / KV / Hyperdrive / Queues / Durable Objects bindings management.
     - name: cloudflare-bindings
+      registry: false
       transport: http
       url: https://bindings.mcp.cloudflare.com/mcp
     # Workers invocation logs, errors, and metrics.
     - name: cloudflare-observability
+      registry: false
       transport: http
       url: https://observability.mcp.cloudflare.com/mcp
     # Workers Builds status and triggers.
     - name: cloudflare-builds
+      registry: false
       transport: http
       url: https://builds.mcp.cloudflare.com/mcp
     # Browser Rendering API control.
     - name: cloudflare-browser
+      registry: false
       transport: http
       url: https://browser.mcp.cloudflare.com/mcp
