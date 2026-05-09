@@ -1,0 +1,46 @@
+name: apm-plackage-isucon
+version: 0.1.0
+description: Agent configuration for ISUCON contest workspaces. Bundles every cross-repo ISUCON skill from mazrean/agent-skills, registers the Grafana MCP server deployed by mazrean/isucon-ansible, and adds the multi-language Serena MCP for symbol-aware navigation across the contest webapp.
+
+dependencies:
+  apm:
+    - mazrean/apm-plackage/common
+    # ISUCON skills (cross-repo; canonical home is mazrean/agent-skills).
+    - mazrean/agent-skills/skills/winning-isucon
+    - mazrean/agent-skills/skills/designing-isucon-architecture
+    - mazrean/agent-skills/skills/writing-isucon-arch-subagent-tasks
+    - mazrean/agent-skills/skills/operating-isucon-servers-via-ssh
+    - mazrean/agent-skills/skills/deploying-with-isucon-ansible
+    - mazrean/agent-skills/skills/porting-isucon-rust-to-go
+    - mazrean/agent-skills/skills/using-grafana-mcp
+  mcp:
+    # Grafana MCP server provisioned by the `monitor_local` role in
+    # mazrean/isucon-ansible (`make monitor`). The mcp-grafana container is
+    # started with `-t streamable-http` and binds host port 8000
+    # (see roles/monitor_local/templates/compose.yaml.j2 + vars/main.yaml
+    # `local.mcp_grafana_port`). Auth to Grafana itself is handled inside
+    # the container via GRAFANA_USERNAME / GRAFANA_PASSWORD, so no header
+    # configuration is needed on the agent side. Pair with the
+    # `using-grafana-mcp` skill bundled above.
+    - name: grafana
+      registry: false
+      transport: http
+      url: http://localhost:8000/mcp
+    # Serena: multi-language LSP-backed symbol search / refactor MCP.
+    # Useful across the polyglot contest webapp (Go / Rust / Node / Python /
+    # Ruby). Started per-session via uvx so the latest published build of
+    # `oraios/serena` is always pulled. Requires `uv` in `mise.toml` —
+    # the `apm-dependency-isucon` skill in this package lists it.
+    - name: serena
+      registry: false
+      transport: stdio
+      command: uvx
+      args:
+        - "--from"
+        - "git+https://github.com/oraios/serena"
+        - "serena"
+        - "start-mcp-server"
+        - "--context"
+        - "ide-assistant"
+        - "--project"
+        - "."
