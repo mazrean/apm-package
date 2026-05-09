@@ -15,6 +15,7 @@ Shared APM (Agent Package Manager) packages for [mazrean](https://github.com/maz
 | `goreleaser` | Cross-build / release tooling shared by Go and Zig repos. |
 | `terraform` | Terraform projects. Registers the HashiCorp Terraform MCP server. |
 | `terraform-gcp` | Terraform projects targeting Google Cloud Platform (depends on `terraform`). |
+| `isucon` | ISUCON contest workspaces. Bundles ISUCON skills from `mazrean/agent-skills`, registers the Grafana MCP server deployed by `mazrean/isucon-ansible`, and registers the Serena MCP server. |
 
 ## Consume from a repo
 
