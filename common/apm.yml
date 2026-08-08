@@ -9,7 +9,7 @@ dependencies:
   - mazrean/agent-skills/skills/writing-implementation-tasks
   - mazrean/agent-skills/skills/writing-project-constitution
   - mazrean/agent-skills/skills/creating-test-cases
-  - mazrean/agent-skills/skills/creating-agent-skills
+  - anthropics/skills/skills/skill-creator
   mcp:
   - name: deepwiki
     registry: false
