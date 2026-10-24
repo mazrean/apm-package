@@ -1,11 +1,11 @@
-name: apm-plackage-cloudflare
-version: 0.3.0
+name: apm-package-cloudflare
+version: 0.3.1
 description: Agent configuration for Cloudflare Workers projects. Bundles Cloudflare's official skill authoring set (cloudflare/skills) and the core Workers-development remote MCP servers. Depends on the frontend package because Workers projects ship TypeScript and consume Astro / Vite tooling.
 
 dependencies:
   apm:
-    - mazrean/apm-plackage/common
-    - mazrean/apm-plackage/frontend
+    - mazrean/apm-package/common
+    - mazrean/apm-package/frontend
     - cloudflare/skills/skills/cloudflare
     - cloudflare/skills/skills/workers-best-practices
     - cloudflare/skills/skills/wrangler

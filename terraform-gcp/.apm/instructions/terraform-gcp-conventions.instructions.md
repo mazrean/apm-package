@@ -31,4 +31,4 @@ applyTo: "**/*.tf, **/*.tfvars, **/versions.tf, **/providers.tf, **/backend.tf"
 ## Tooling
 
 - Pin `gcloud` in `mise.toml` (see `apm-dependency-terraform-gcp` skill).
-- Use the `terraform` MCP server (registered by `apm-plackage/terraform`) for `google` / `google-beta` resource lookups.
+- Use the `terraform` MCP server (registered by `apm-package/terraform`) for `google` / `google-beta` resource lookups.

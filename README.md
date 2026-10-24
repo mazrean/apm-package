@@ -1,4 +1,4 @@
-# apm-plackage
+# apm-package
 
 Shared APM (Agent Package Manager) packages for [mazrean](https://github.com/mazrean) repositories. Distributes Agent Skills, instructions, and MCP server declarations via [microsoft/apm](https://github.com/microsoft/apm).
 
@@ -25,8 +25,8 @@ name: my-repo
 version: 0.1.0
 dependencies:
   apm:
-    - mazrean/apm-plackage/common
-    - mazrean/apm-plackage/go
+    - mazrean/apm-package/common
+    - mazrean/apm-package/go
 ```
 
 Then in the same repo, add the corresponding tools to `mise.toml`. Each package contains an `apm-dependency-<name>` Agent Skill that lists what to add. The list is hand-maintained — `apm` does not auto-sync `mise.toml`.

@@ -22,7 +22,7 @@ Each top-level directory (`common/`, `go/`, `zig/`, `cloudflare/`, `frontend/`, 
 - Coding-agent CLIs (claude-code / codex / etc.) are intentionally NOT pinned in `mise.toml`.
 - Browser automation is unified on Playwright CLI + the `playwright-cli` Agent Skill. Do not declare a Playwright MCP server in any package.
 - Spec-driven development uses `mazrean/agent-skills/skills/writing-*`. `cc-sdd` and `github/spec-kit` are deprecated org-wide.
-- New cross-repo skills go to `mazrean/agent-skills`, not into individual `apm-plackage` packages.
+- New cross-repo skills go to `mazrean/agent-skills`, not into individual `apm-package` packages.
 
 ## Editing
 

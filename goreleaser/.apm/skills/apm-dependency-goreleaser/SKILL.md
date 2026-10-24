@@ -1,6 +1,6 @@
 ---
 name: apm-dependency-goreleaser
-description: Lists the CLI tools that must appear in mise.toml for any repo depending on apm-plackage/goreleaser. Use when bootstrapping a release pipeline.
+description: Lists the CLI tools that must appear in mise.toml for any repo depending on apm-package/goreleaser. Use when bootstrapping a release pipeline.
 ---
 
 # goreleaser package — mise dependencies

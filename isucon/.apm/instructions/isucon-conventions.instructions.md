@@ -45,9 +45,9 @@ The contest workspace follows a fixed order:
 
 ## Out of scope here
 
-- Per-language tooling (Go DI, lint, etc.) belongs in `apm-plackage/go`,
+- Per-language tooling (Go DI, lint, etc.) belongs in `apm-package/go`,
   not here. ISUCON repos that pick Go SHOULD depend on **both**
-  `apm-plackage/isucon` and `apm-plackage/go`.
-- Frontend tooling (Astro / Lit / Vite) belongs in `apm-plackage/frontend`.
+  `apm-package/isucon` and `apm-package/go`.
+- Frontend tooling (Astro / Lit / Vite) belongs in `apm-package/frontend`.
 - Setup / authentication of the Grafana MCP server itself is documented
   in `mazrean/isucon-ansible`, not in the `using-grafana-mcp` skill.
