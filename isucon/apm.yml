@@ -1,10 +1,10 @@
-name: apm-plackage-isucon
-version: 0.1.0
+name: apm-package-isucon
+version: 0.1.1
 description: Agent configuration for ISUCON contest workspaces. Bundles every cross-repo ISUCON skill from mazrean/agent-skills, registers the Grafana MCP server deployed by mazrean/isucon-ansible, and adds the multi-language Serena MCP for symbol-aware navigation across the contest webapp.
 
 dependencies:
   apm:
-    - mazrean/apm-plackage/common
+    - mazrean/apm-package/common
     # ISUCON skills (cross-repo; canonical home is mazrean/agent-skills).
     - mazrean/agent-skills/skills/winning-isucon
     - mazrean/agent-skills/skills/designing-isucon-architecture

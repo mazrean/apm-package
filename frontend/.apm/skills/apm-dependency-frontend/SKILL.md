@@ -1,6 +1,6 @@
 ---
 name: apm-dependency-frontend
-description: Lists the CLI tools that must appear in mise.toml for any repo depending on apm-plackage/frontend. Required for E2E testing via Playwright CLI and for browser debugging via chrome-devtools-mcp.
+description: Lists the CLI tools that must appear in mise.toml for any repo depending on apm-package/frontend. Required for E2E testing via Playwright CLI and for browser debugging via chrome-devtools-mcp.
 ---
 
 # Frontend package — mise dependencies

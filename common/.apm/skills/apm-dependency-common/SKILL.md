@@ -1,11 +1,11 @@
 ---
 name: apm-dependency-common
-description: Lists the CLI tools that must appear in mise.toml for any repo depending on apm-plackage/common. Use when bootstrapping or auditing a repo's mise.toml.
+description: Lists the CLI tools that must appear in mise.toml for any repo depending on apm-package/common. Use when bootstrapping or auditing a repo's mise.toml.
 ---
 
 # Common package — mise dependencies
 
-Every repo that depends on `mazrean/apm-plackage/common` SHOULD include the following tools in its `mise.toml`:
+Every repo that depends on `mazrean/apm-package/common` SHOULD include the following tools in its `mise.toml`:
 
 ```toml
 [tools]

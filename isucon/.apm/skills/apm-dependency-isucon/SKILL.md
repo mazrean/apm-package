@@ -1,6 +1,6 @@
 ---
 name: apm-dependency-isucon
-description: Lists the CLI tools that must appear in mise.toml for any repo depending on apm-plackage/isucon. Use when bootstrapping or auditing an ISUCON contest workspace's mise.toml.
+description: Lists the CLI tools that must appear in mise.toml for any repo depending on apm-package/isucon. Use when bootstrapping or auditing an ISUCON contest workspace's mise.toml.
 ---
 
 # ISUCON package — mise dependencies
@@ -23,9 +23,9 @@ description: Lists the CLI tools that must appear in mise.toml for any repo depe
   `ansible-playbook monitor.yaml`) once before starting the agent so the
   container is reachable at `http://localhost:8000/mcp`.
 - ISUCON repos that pick Go for the application SHOULD additionally
-  depend on `apm-plackage/go` (which pins `go`, `gopls`, and registers
+  depend on `apm-package/go` (which pins `go`, `gopls`, and registers
   the `gopls` MCP server). Do not duplicate those pins here.
 - Ansible itself is intentionally NOT pinned via mise — install it per
   developer (system package or `pipx install ansible`).
 - The coding-agent CLI (`claude-code`, `codex`, `gemini-cli`, etc.) is
-  intentionally NOT pinned, matching `apm-plackage/common`'s policy.
+  intentionally NOT pinned, matching `apm-package/common`'s policy.

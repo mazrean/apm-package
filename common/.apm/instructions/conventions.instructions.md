@@ -25,7 +25,7 @@ applyTo: "**"
 
 - Pin CLI tool versions in `mise.toml` at the repo root.
 - The coding-agent CLI (claude-code / codex / etc.) is NOT pinned in mise — install per developer.
-- Each `apm-plackage` stack package ships an `apm-dependency-<package>` Agent Skill listing the tools it expects in `mise.toml`. The repo owner hand-merges these into the local `mise.toml`.
+- Each `apm-package` stack package ships an `apm-dependency-<package>` Agent Skill listing the tools it expects in `mise.toml`. The repo owner hand-merges these into the local `mise.toml`.
 
 ## Command output (rtk)
 
@@ -42,4 +42,4 @@ applyTo: "**"
 ## Adding new shared skills
 
 - Reusable skills (cross-repo) belong in `mazrean/agent-skills`, not in individual repos.
-- Per-stack standards belong in the appropriate `mazrean/apm-plackage/<stack>` package.
+- Per-stack standards belong in the appropriate `mazrean/apm-package/<stack>` package.

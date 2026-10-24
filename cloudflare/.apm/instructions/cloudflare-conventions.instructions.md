@@ -23,7 +23,7 @@ Deeper, per-feature reference skills (e.g. `tech-cloudflare-d1`, `tech-cloudflar
 
 ## Frontend inheritance
 
-This package inherits from `apm-plackage/frontend` because Workers projects also need Node + pnpm + Playwright CLI + chrome-devtools-mcp.
+This package inherits from `apm-package/frontend` because Workers projects also need Node + pnpm + Playwright CLI + chrome-devtools-mcp.
 
 ## Cloudflare MCP servers
 

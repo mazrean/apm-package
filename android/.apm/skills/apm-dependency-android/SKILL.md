@@ -1,6 +1,6 @@
 ---
 name: apm-dependency-android
-description: Lists the CLI tools that must appear in mise.toml for any repo depending on apm-plackage/android. Use when bootstrapping or auditing an Android repo's mise.toml.
+description: Lists the CLI tools that must appear in mise.toml for any repo depending on apm-package/android. Use when bootstrapping or auditing an Android repo's mise.toml.
 ---
 
 # Android package — mise dependencies
